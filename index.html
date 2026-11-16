@@ -4,35 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinner AYCE Menu</title>
-    <style>
+   <style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+        align-items: start;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    @media (min-width: 1025px) and (pointer: fine) {
         body {
-            margin: 0;
-            padding: 0;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 0;
         }
 
         img {
-            width: 100%;
             max-width: 600px;
             margin-bottom: 5px;
         }
-
-        /* 手机竖屏和横屏每行显示两张图，间距 5px */
-        @media (max-width: 767px), (max-width: 1024px) and (pointer: coarse) {
-            body {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 5px;
-                align-items: start;
-            }
-
-            img {
-                margin-bottom: 0;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <img src="0001.jpg" alt="P1">
